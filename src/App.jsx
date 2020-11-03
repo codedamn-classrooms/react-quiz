@@ -51,7 +51,7 @@ export default function App() {
 							<span>Question 1</span>/{questions.length}
 						</div>
 						{/* HINT: You can access first question using questions[0] */}
-						<div className='question-text'>This is where the question text should go</div>
+						<div className='question-text'>{questions[0].questionText}</div>
 					</div>
 					<div className='answer-section'>
 						<button>Answer 1</button>
