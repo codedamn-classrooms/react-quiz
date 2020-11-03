@@ -42,8 +42,6 @@ export default function App() {
 
 	return (
 		<div className='app'>
-			{/* HINT: replace "false" with logic to display the 
-      score when the user has answered all the questions */}
 			{false ? (
 				<div className='score-section'>You scored 1 out of {questions.length}</div>
 			) : (
@@ -52,6 +50,7 @@ export default function App() {
 						<div className='question-count'>
 							<span>Question 1</span>/{questions.length}
 						</div>
+						{/* HINT: You can access first question using questions[0] */}
 						<div className='question-text'>This is where the question text should go</div>
 					</div>
 					<div className='answer-section'>
