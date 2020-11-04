@@ -40,6 +40,13 @@ export default function App() {
 		},
 	];
 
+	// Define function body to increment the question index variable
+	function handleAnswerClick() {
+
+	}
+
+	// Define a state variable here to track question status
+
 	return (
 		<div className='app'>
 			{false ? (
@@ -50,11 +57,13 @@ export default function App() {
 						<div className='question-count'>
 							<span>Question 1</span>/{questions.length}
 						</div>
+							{/* You should change the "0" here to a state variable */}
 						<div className='question-text'>{questions[0].questionText}</div>
 					</div>
-						{/* HINT: You can access first question's answers using questions[0].answerOptions.map(answer => ....) */}
+						{/* You should change the "0" here to a state variable */}
 					<div className='answer-section'>
 						{questions[0].answerOptions.map(answer => {
+							// Add onClick listener to this button
 							return <button key={answer.answerText}>{answer.answerText}</button>
 						})}
 					</div>
