@@ -50,9 +50,9 @@ export default function App() {
 						<div className='question-count'>
 							<span>Question 1</span>/{questions.length}
 						</div>
-						{/* HINT: You can access first question using questions[0] */}
 						<div className='question-text'>{questions[0].questionText}</div>
 					</div>
+						{/* HINT: You can access first question's answers using questions[0].answerOptions.map(answer => ....) */}
 					<div className='answer-section'>
 						<button>Answer 1</button>
 						<button>Answer 2</button>
