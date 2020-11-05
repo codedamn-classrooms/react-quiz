@@ -45,11 +45,12 @@ export default function App() {
 
 	function handleAnswerClick() {
 		// Check if the quiz is over here
-
-		// If yes, set the quizFinished variable to true
-
-		// If no, increment the current index like always
-		setCurrentIndex((value) => value + 1)
+		if (currentIndex === questions.length - 1) {
+			// quiz over
+			setQuizFinished(true)
+		} else {
+			setCurrentIndex((value) => value + 1)
+		}
 	}
 
 	const [quizFinished, setQuizFinished] = useState(false)
