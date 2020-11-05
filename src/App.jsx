@@ -43,14 +43,20 @@ export default function App() {
 		}
 	]
 
-	// Define function body to increment the question index variable
 	function handleAnswerClick() {
+		// Check if the quiz is over here
+
+		// If yes, set the quizFinished variable to true
+
+		// If no, increment the current index like always
 		setCurrentIndex((value) => value + 1)
 	}
 
+	const [quizFinished, setQuizFinished] = useState(false)
+
 	return (
 		<div className="app">
-			{false ? (
+			{quizFinished ? (
 				<div className="score-section">You scored 1 out of {questions.length}</div>
 			) : (
 				<>
