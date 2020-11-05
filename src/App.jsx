@@ -44,7 +44,8 @@ export default function App() {
 	]
 
 	function handleAnswerClick() {
-		// Check if the quiz is over here
+		// Check if correct answer is pressed. (See the hint on the left)
+
 		if (currentIndex === questions.length - 1) {
 			// quiz over
 			setQuizFinished(true)
@@ -55,9 +56,12 @@ export default function App() {
 
 	const [quizFinished, setQuizFinished] = useState(false)
 
+	// Create a state variable here [score, setScore]
+
 	return (
 		<div className="app">
 			{quizFinished ? (
+				/* Change this hardcoded 1 to state variable score else */
 				<div className="score-section">You scored 1 out of {questions.length}</div>
 			) : (
 				<>
@@ -65,10 +69,8 @@ export default function App() {
 						<div className="question-count">
 							<span>Question 1</span>/{questions.length}
 						</div>
-						{/* You should change the "0" here to a state variable */}
 						<div className="question-text">{questions[currentIndex].questionText}</div>
 					</div>
-					{/* You should change the "0" here to a state variable */}
 					<div className="answer-section">
 						{questions[currentIndex].answerOptions.map((answer) => {
 							// Add onClick listener to this button
