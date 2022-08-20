@@ -1,0 +1,17 @@
+{
+	"name": "vite-react-starter",
+	"version": "0.0.0",
+	"scripts": {
+		"dev": "vite --host --port 1337",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-react": "^2.0.0",
+		"vite": "^3.0.0"
+	}
+}
